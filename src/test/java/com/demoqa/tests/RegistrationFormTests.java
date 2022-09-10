@@ -1,6 +1,5 @@
 package com.demoqa.tests;
 
-import com.codeborne.selenide.Configuration;
 import com.demoqa.pages.RegistrationFormPage;
 import org.junit.jupiter.api.*;
 
@@ -28,7 +27,8 @@ public class RegistrationFormTests extends TestBase {
                     .uploadPicture("img/testFile.jpg")
                     .currentAddress("NewOneTown, NewOne st., 22")
                     .state("Uttar Pradesh")
-                    .city("Lucknow");
+                    .city("Lucknow")
+                    .submit();
         });
         step("Check form results", () -> {
             //Проверяем результаты построчно
